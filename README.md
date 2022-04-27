@@ -1,9 +1,10 @@
 # image-to-particle
 ### 画像、動画をパーティクルに変換  
 <br>
-開発環境  
-Minecraft Java Edition 1.18.2  
-Python3.8.7  
+
+>開発環境<br>
+Minecraft Java Edition 1.18.2<br>
+Python3.8.7<br>
 
 ## Usage
 1. Python3のインストール  
