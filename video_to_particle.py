@@ -56,7 +56,7 @@ class video():
         for r in range(1,count):
           scores.append(f"execute if score {target_player} video_{basename} matches {r} run function video_{basename}:{r}\n")
         f.writelines(scores)
-      print("変換が完了しました！")
+      print(f"変換が完了しました！\nフォルダ名:video_{basename}")
       
 if __name__ == "__main__":
   mp4path = input("ファイル名を入力してください(動画): ")
