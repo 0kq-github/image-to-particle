@@ -7,22 +7,30 @@ Minecraft Java Edition 1.18.2<br>
 Python 3.8.7<br>
 
 ## Usage
-1. Python3のインストール  
-2. 依存ライブラリのインストール  
+**1.** [Python3](https://www.python.org/downloads/)のインストール<br><br>
+**2.** 依存ライブラリのインストール  
 ```
 pip install -r requirements.txt
 ```
-3. 変換  
-  
- 画像:
+<br>
+
+**3.** 変換  
+
+
+* 画像
+
 ```
 python image_to_particle.py
 ```
- 動画:
+
+* 動画
 ```
+
 python video_to_particle.py
 ```
-4. 出力されたmcfunctionをワールドに導入しfunctionを実行してください。<br>
+<br>
+
+**4**. 出力されたmcfunctionをワールドに導入しfunctionを実行してください。<br>
 動画の場合は生成されたフォルダをdatapacksフォルダに導入し、
 ```mcfunction
 function #video_ファイル名:loop
