@@ -27,7 +27,7 @@ def main(img,name):
   for i in img_array:
     x = shape_int
     for v in i:
-      command = f"particle dust {round(v[0] / 256, 8)} {round(v[1] / 256, 8)} {round(v[2] / 256, 8)} {round(v[3] / 255 * 0.5, 6)} ^{round(x*0.1,1)} ^{round(y*0.1,1)} ^ 0 0 0 0 1 force\n"
+      command = f"particle dust {round(v[0] / 256, 8)} {round(v[1] / 256, 8)} {round(v[2] / 256, 8)} {round(v[3] / 255 * 0.5, 6)} ^{round(x*0.1,1)} ^{round(y*0.1,1)} ^ 0 0 0 0 1 {config['particle']}\n"
       x -= 1
 
       lines.append(command)

@@ -1,6 +1,6 @@
 {
   "max_pixel":64,
-  
+  "particle":"force",
   "fps":20,
   "target":"$frame"
 }
