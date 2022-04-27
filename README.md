@@ -7,6 +7,9 @@ Minecraft Java Edition 1.18.2<br>
 Python 3.8.7<br>
 
 ## Usage
+リリースからダウンロードするのが一番楽です。  
+ソースから動かす場合は以下の通りです。  
+
 **1.** [Python3](https://www.python.org/downloads/)のインストール<br><br>
 **2.** 依存ライブラリのインストール  
 ```
