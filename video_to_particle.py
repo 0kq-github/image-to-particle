@@ -9,10 +9,6 @@ from tqdm import tqdm
 import shutil
 import json
 
-mp4path = input("ファイル名を入力してください(動画): ")
-resultpath = "./video_" + os.path.splitext(os.path.basename(mp4path))[0]
-count = 0
-
 class video():
 
   def save_all_frames(self, video_path, dir_path, basename, target_player, ext='jpg'):
@@ -62,7 +58,10 @@ class video():
         f.writelines(scores)
       print("変換が完了しました！")
       
-
-v = video()
-v.save_all_frames(mp4path, resultpath, os.path.splitext(os.path.basename(mp4path))[0] ,config.target ,"png")
+if __name__ == "__main__":
+  mp4path = input("ファイル名を入力してください(動画): ")
+  resultpath = "./video_" + os.path.splitext(os.path.basename(mp4path))[0]
+  count = 0
+  v = video()
+  v.save_all_frames(mp4path, resultpath, os.path.splitext(os.path.basename(mp4path))[0] ,config.target ,"png")
 
