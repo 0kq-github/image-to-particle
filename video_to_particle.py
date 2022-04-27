@@ -31,6 +31,7 @@ class video():
       shutil.copytree("base",dir_path,dirs_exist_ok=True)
       os.makedirs(f"{dir_path}/data/video_{basename}/functions", exist_ok=True)
       os.makedirs(f"{dir_path}/data/video_{basename}/tags/functions", exist_ok=True)
+      os.makedirs(f"{dir_path}/data/minecraft/tags/functions", exist_ok=True)
       
 
       print("mcfunctionに書き出し中...")
