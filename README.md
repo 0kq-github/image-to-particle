@@ -4,7 +4,7 @@
 
 開発環境<br>
 Minecraft Java Edition 1.18.2<br>
-Python3.8.7<br>
+Python 3.8.7<br>
 
 ## Usage
 1. Python3のインストール  
@@ -22,7 +22,7 @@ python image_to_particle.py
 ```
 python video_to_particle.py
 ```
-4. 出力されたmcfunctionをワールドに導入しfunctionを実行してください。　　
+4. 出力されたmcfunctionをワールドに導入しfunctionを実行してください。<br>
 動画の場合は生成されたフォルダをdatapacksフォルダに導入し、
 ```mcfunction
 function #video_ファイル名:loop
