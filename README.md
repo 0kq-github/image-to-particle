@@ -9,11 +9,11 @@ pip install -r requirements.txt
 ```
 3. 実行  
   
-画像:
+ 画像:
 ```python
 python image_to_particle.py
 ```
-動画:
+ 動画:
 ```python
 python video_to_particle.py
 ```
