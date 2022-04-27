@@ -4,21 +4,23 @@ import cv2
 import os
 import image_to_particle
 import ffmpeg
-import config
 from tqdm import tqdm
 import shutil
 import json
 
-class video():
+with open("config.json",mode="r",encoding="utf-8") as j:
+  config = json.load(j)
 
+
+class video():
   def save_all_frames(self, video_path, dir_path, basename, target_player, ext='jpg'):
-      convert_path = f"{basename}_{config.fps}.mp4"
+      convert_path = f"{basename}_{config['fps']}.mp4"
       try:
         os.remove(convert_path)
       except:
         pass
       print("フレームレートを変換中...")
-      ffmpeg.input(video_path).trim(start=0).filter("fps",fps=config.fps, round="up").output(convert_path).run(quiet=True)
+      ffmpeg.input(video_path).trim(start=0).filter("fps",fps=config["fps"], round="up").output(convert_path).run(quiet=True)
 
       cap = cv2.VideoCapture(convert_path)
       frame_count = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
@@ -56,12 +58,17 @@ class video():
         for r in range(1,count):
           scores.append(f"execute if score {target_player} video_{basename} matches {r} run function video_{basename}:{r}\n")
         f.writelines(scores)
-      print(f"変換が完了しました！\nフォルダ名:video_{basename}")
       
 if __name__ == "__main__":
-  mp4path = input("ファイル名を入力してください(動画): ")
+  print("###############################################################\n")
+  print(" Video-To-Particle v0.1")
+  print(" https://github.com/0kq-github/image-to-particle")
+  print("\n###############################################################")
+  mp4path = input("動画ファイル名を入力してください: ")
   resultpath = "./video_" + os.path.splitext(os.path.basename(mp4path))[0]
   count = 0
   v = video()
-  v.save_all_frames(mp4path, resultpath, os.path.splitext(os.path.basename(mp4path))[0] ,config.target ,"png")
+  v.save_all_frames(mp4path, resultpath, os.path.splitext(os.path.basename(mp4path))[0] ,config["target"] ,"png")
+  print(f"変換が完了しました！\nフォルダ名:video_{os.path.splitext(os.path.basename(mp4path))[0]}")
+  input("Enterキーで終了します... ")
 

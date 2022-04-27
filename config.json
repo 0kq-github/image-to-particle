@@ -1,0 +1,6 @@
+{
+  "max_pixel":64,
+  
+  "fps":20,
+  "target":"$frame"
+}
