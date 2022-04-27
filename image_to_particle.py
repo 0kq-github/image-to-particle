@@ -3,7 +3,6 @@ import numpy as np
 import os
 import config
 
-
 def main(img,name):
   height = img.shape[0]
   width = img.shape[1]

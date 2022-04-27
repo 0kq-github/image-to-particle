@@ -24,7 +24,7 @@ class video():
       print("フレームレートを変換中...")
       ffmpeg.input(video_path).trim(start=0).filter("fps",fps=config.fps, round="up").output(convert_path).run(quiet=True)
 
-      cap = cv2.VideoCapture(video_path)
+      cap = cv2.VideoCapture(convert_path)
       frame_count = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
 
       if not cap.isOpened():
